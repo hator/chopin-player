@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Fryderyk Chopin</title>
+        <link rel="stylesheet" href="styles.css" />
+    </head>
+    <body>
+        <div id="background"></div>
+        <div id="wrapper">
+            <div class="container">
+                <a onClick="startPlay()" id="playButton" class="play">
+                    <img id="portrait" src="photo.jpeg" />
+                    <div class="overlay"></div>
+                </a>
+            </div>
+
+            <h2 id="title">Prelude in C# minor, Op. 45</h2>
+            <h1>Fryderyk Chopin</h1>
+        </div>
+
+        <audio id="audio">
+            <em>Sorry, your browser doesn't support HTML5 audio.</em>
+        </audio>
+
+        <footer>
+            <div>Icons made by <a href="https://www.flaticon.com/authors/daniele-de-santis" title="Daniele De Santis">Daniele De Santis</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
+            <div>Recordings by <a href="https://musopen.org/music/composer/frederic-chopin/">musopen.org</a></div>
+        </footer>
+
+        <script src="playlist.js"></script>
+        <script src="player.js"></script>
+    </body>
+</html>

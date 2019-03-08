@@ -1,0 +1,108 @@
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-family: helvetica, sans-serif;
+    color: #ddd;
+}
+
+#background {
+    background: url('bg.jpg') #2e3336;
+    background-size: cover;
+    filter: blur(10px);
+
+    width: calc(100% + 40px);
+    height: calc(100% + 40px);
+
+    position: fixed;
+    z-index: -1;
+    left: -20px;
+    top: -20px;
+}
+
+#wrapper {
+    text-align: center;
+    border-radius: 10px;
+    z-index: 2;
+    padding: 40px;
+    width: 550px;
+    height: 550px;
+    overflow: hidden;
+    display: block;
+}
+
+.container {
+    position: relative;
+    display: inline-block;
+    width: auto;
+    height: auto;
+    border-radius: 50%;
+    opacity: 0.8;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.overlay {
+    position: absolute;
+    top: 25%;
+    bottom: 0;
+    left: 25%;
+    right: 0;
+    height: 50%;
+    width: 50%;
+    opacity: 0;
+    transition: 0.2s ease;
+    filter: invert(1);
+    background-position: center;
+    background-repeat: none;
+    background-size: contain;
+}
+
+.container:hover .overlay {
+    opacity: 1;
+}
+
+
+.play .overlay {
+    background-image: url('play.svg');
+}
+
+.pause .overlay {
+    background-image: url('pause.svg');
+}
+
+h1 {
+    font-size: 24px;
+}
+
+h2 {
+    font-size: 32px;
+}
+
+footer {
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left:0;
+    box-sizing: border-box;
+    padding: 15px;
+    color: #bbb;
+    display: flex;
+    justify-content: space-between;
+}
+
+footer a {
+    color: inherit;
+}
