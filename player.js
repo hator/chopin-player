@@ -21,7 +21,7 @@ function getNextSong() {
 
 
     return {
-        url: encodeURI('music/' + nextSongFilename),
+        url: 'music/' + encodeURIComponent(nextSongFilename),
         title: nextSongFilename.slice(0, -4).trim()
     };
 }
